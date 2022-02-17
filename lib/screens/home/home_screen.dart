@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:personal_portfolio/screens/home/components/my_work_exp.dart';
+import 'package:personal_portfolio/screens/home/components/positions_of_resp.dart';
 import 'package:personal_portfolio/screens/main/main_screen.dart';
 
 import 'components/highlights_info.dart';
@@ -15,8 +17,10 @@ class HomeScreen extends StatelessWidget {
       children: [
         HomeBanner(),
         // HighLightsInfo(),
+        WorkExp(),
         MyProjects(),
-        Recommendations(),
+        PositionsOfResponsibility(),
+        // Recommendations(),
       ],
     );
   }

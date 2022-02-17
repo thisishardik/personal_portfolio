@@ -17,7 +17,7 @@ class Skills extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: defaultPadding),
           child: Text(
-            "Skills",
+            "Relevant Skills",
             style: Theme.of(context).textTheme.subtitle2,
           ),
         ),

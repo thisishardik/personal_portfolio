@@ -55,6 +55,9 @@ class KnowledgeText extends StatelessWidget {
           Expanded(
             child: Text(
               text,
+              style: TextStyle(
+                letterSpacing: 0.8,
+              )
             ),
           ),
         ],

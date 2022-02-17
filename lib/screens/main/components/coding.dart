@@ -17,7 +17,7 @@ class Coding extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(vertical: defaultPadding),
           child: Text(
-            "Coding",
+            "Programming Languages",
             style: Theme.of(context).textTheme.subtitle2,
           ),
         ),
