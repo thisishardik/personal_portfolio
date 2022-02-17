@@ -49,7 +49,8 @@ class HomeBanner extends StatelessWidget {
                         children: [
                           ElevatedButton(
                               onPressed: () {
-                                _launchURL("mailto:technical.hardik29@gmail.com?subject=Get In Touch and Connection Request");
+                                _launchURL(
+                                    "mailto:technical.hardik29@gmail.com?subject=Get In Touch and Connection Request");
                               },
                               style: TextButton.styleFrom(
                                 side: BorderSide(
@@ -67,7 +68,10 @@ class HomeBanner extends StatelessWidget {
                               )),
                           SizedBox(width: 10),
                           ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                _launchURL(
+                                    "https://drive.google.com/file/d/1g_eBAUxdriFEX1ekWSWXPjDMynGixVUX/view?usp=sharing");
+                              },
                               style: TextButton.styleFrom(
                                 padding: EdgeInsets.symmetric(
                                     horizontal: defaultPadding * 2,
@@ -81,28 +85,33 @@ class HomeBanner extends StatelessWidget {
                         ],
                       )
                     : Row(
-                      children: [
-                        ElevatedButton(
-                            onPressed: () {
-                              _launchURL("mailto:technical.hardik29@gmail.com?subject=Get In Touch and Connection Request");
-                            },
-                            style: TextButton.styleFrom(
-                              side: BorderSide(
-                                color: primaryColor,
+                        children: [
+                          ElevatedButton(
+                              onPressed: () {
+                                _launchURL(
+                                    "mailto:technical.hardik29@gmail.com?subject=Get In Touch and Connection Request");
+                              },
+                              style: TextButton.styleFrom(
+                                side: BorderSide(
+                                  color: primaryColor,
+                                ),
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: defaultPadding * 1,
+                                    vertical: defaultPadding),
+                                backgroundColor: Colors.transparent,
+                                onSurface: Colors.amber,
                               ),
-                              padding: EdgeInsets.symmetric(
-                                  horizontal: defaultPadding * 1,
-                                  vertical: defaultPadding),
-                              backgroundColor: Colors.transparent,
-                              onSurface: Colors.amber,
-                            ),
-                            child: Text(
-                              "Contact Me",
-                              style: TextStyle(color: Colors.white, fontSize: 11),
-                            )),
-                        SizedBox(width: 10),
-                        ElevatedButton(
-                            onPressed: () {},
+                              child: Text(
+                                "Contact Me",
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 11),
+                              )),
+                          SizedBox(width: 10),
+                          ElevatedButton(
+                            onPressed: () {
+                              _launchURL(
+                                  "https://drive.google.com/file/d/1g_eBAUxdriFEX1ekWSWXPjDMynGixVUX/view?usp=sharing");
+                            },
                             style: TextButton.styleFrom(
                               padding: EdgeInsets.symmetric(
                                   horizontal: defaultPadding * 0.75,
@@ -114,8 +123,8 @@ class HomeBanner extends StatelessWidget {
                               style: TextStyle(color: darkColor, fontSize: 11),
                             ),
                           ),
-                      ],
-                    ),
+                        ],
+                      ),
               ],
             ),
           )
@@ -123,7 +132,7 @@ class HomeBanner extends StatelessWidget {
       ),
     );
   }
-  
+
   void _launchURL(String _url) async {
     if (!await launch(_url)) throw 'Could not launch $_url';
   }
@@ -166,6 +175,7 @@ class AnimatedText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedTextKit(
+      repeatForever: true,
       animatedTexts: [
         TyperAnimatedText(
           "I solve logical problems using Machine Learning.",
