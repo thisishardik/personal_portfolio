@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_profile/components/animated_counter.dart';
-import 'package:flutter_profile/responsive.dart';
+import 'package:personal_portfolio/components/animated_counter.dart';
+import 'package:personal_portfolio/responsive.dart';
 
 import '../../../constants.dart';
-import 'heigh_light.dart';
+import 'highlight.dart';
 
 class HighLightsInfo extends StatelessWidget {
   const HighLightsInfo({
@@ -20,14 +20,14 @@ class HighLightsInfo extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    HeighLight(
+                    Highlight(
                       counter: AnimatedCounter(
                         value: 119,
                         text: "K+",
                       ),
                       label: "Subscribers",
                     ),
-                    HeighLight(
+                    Highlight(
                       counter: AnimatedCounter(
                         value: 40,
                         text: "+",
@@ -40,14 +40,14 @@ class HighLightsInfo extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    HeighLight(
+                    Highlight(
                       counter: AnimatedCounter(
                         value: 30,
                         text: "+",
                       ),
                       label: "GitHub Projects",
                     ),
-                    HeighLight(
+                    Highlight(
                       counter: AnimatedCounter(
                         value: 13,
                         text: "K+",
@@ -61,28 +61,28 @@ class HighLightsInfo extends StatelessWidget {
           : Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                HeighLight(
+                Highlight(
                   counter: AnimatedCounter(
                     value: 119,
                     text: "K+",
                   ),
                   label: "Subscribers",
                 ),
-                HeighLight(
+                Highlight(
                   counter: AnimatedCounter(
                     value: 40,
                     text: "+",
                   ),
                   label: "Videos",
                 ),
-                HeighLight(
+                Highlight(
                   counter: AnimatedCounter(
                     value: 30,
                     text: "+",
                   ),
                   label: "GitHub Projects",
                 ),
-                HeighLight(
+                Highlight(
                   counter: AnimatedCounter(
                     value: 13,
                     text: "K+",
