@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/responsive.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../../constants.dart';
 
@@ -20,7 +21,7 @@ class HomeBanner extends StatelessWidget {
             "assets/images/1003031519.jpg",
             fit: BoxFit.cover,
           ),
-          Container(color: darkColor.withOpacity(0.66)),
+          Container(color: darkColor.withOpacity(0.55)),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
             child: Column(
@@ -43,26 +44,88 @@ class HomeBanner extends StatelessWidget {
                   const SizedBox(height: defaultPadding / 2),
                 MyBuildAnimatedText(),
                 SizedBox(height: defaultPadding),
-                if (!Responsive.isMobileLarge(context))
-                  ElevatedButton(
-                    onPressed: () {},
-                    style: TextButton.styleFrom(
-                      padding: EdgeInsets.symmetric(
-                          horizontal: defaultPadding * 2,
-                          vertical: defaultPadding),
-                      backgroundColor: primaryColor,
+                !Responsive.isMobileLarge(context)
+                    ? Row(
+                        children: [
+                          ElevatedButton(
+                              onPressed: () {
+                                _launchURL("mailto:technical.hardik29@gmail.com?subject=Get In Touch and Connection Request");
+                              },
+                              style: TextButton.styleFrom(
+                                side: BorderSide(
+                                  color: primaryColor,
+                                ),
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: defaultPadding * 2,
+                                    vertical: defaultPadding),
+                                backgroundColor: Colors.transparent,
+                                onSurface: Colors.amber,
+                              ),
+                              child: Text(
+                                "Contact Me",
+                                style: TextStyle(color: Colors.white),
+                              )),
+                          SizedBox(width: 10),
+                          ElevatedButton(
+                              onPressed: () {},
+                              style: TextButton.styleFrom(
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: defaultPadding * 2,
+                                    vertical: defaultPadding),
+                                backgroundColor: primaryColor,
+                              ),
+                              child: Text(
+                                "Get Resume",
+                                style: TextStyle(color: darkColor),
+                              )),
+                        ],
+                      )
+                    : Row(
+                      children: [
+                        ElevatedButton(
+                            onPressed: () {
+                              _launchURL("mailto:technical.hardik29@gmail.com?subject=Get In Touch and Connection Request");
+                            },
+                            style: TextButton.styleFrom(
+                              side: BorderSide(
+                                color: primaryColor,
+                              ),
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: defaultPadding * 1,
+                                  vertical: defaultPadding),
+                              backgroundColor: Colors.transparent,
+                              onSurface: Colors.amber,
+                            ),
+                            child: Text(
+                              "Contact Me",
+                              style: TextStyle(color: Colors.white, fontSize: 11),
+                            )),
+                        SizedBox(width: 10),
+                        ElevatedButton(
+                            onPressed: () {},
+                            style: TextButton.styleFrom(
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: defaultPadding * 0.75,
+                                  vertical: defaultPadding),
+                              backgroundColor: primaryColor,
+                            ),
+                            child: Text(
+                              "Get Resume",
+                              style: TextStyle(color: darkColor, fontSize: 11),
+                            ),
+                          ),
+                      ],
                     ),
-                    child: Text(
-                      "Get Resume",
-                      style: TextStyle(color: darkColor),
-                    ),
-                  ),
               ],
             ),
           )
         ],
       ),
     );
+  }
+  
+  void _launchURL(String _url) async {
+    if (!await launch(_url)) throw 'Could not launch $_url';
   }
 }
 
@@ -113,7 +176,7 @@ class AnimatedText extends StatelessWidget {
           speed: Duration(milliseconds: 60),
         ),
         TyperAnimatedText(
-          "I work on applied machine learning projects and software development.",
+          "I work on Applied Machine Learning projects and Full Stack Software Development.",
           speed: Duration(milliseconds: 60),
         ),
       ],
