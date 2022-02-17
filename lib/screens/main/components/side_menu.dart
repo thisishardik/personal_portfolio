@@ -74,24 +74,28 @@ class SideMenu extends StatelessWidget {
                       child: Row(
                         children: [
                           Spacer(),
+                          // LinkedIn
                           IconButton(
                             onPressed: () {
                               _launchURL("https://www.linkedin.com/in/hardik-srivastava-2911hs/");
                             },
                             icon: SvgPicture.asset("assets/icons/linkedin.svg"),
                           ),
+                          // GitHub
                           IconButton(
                             onPressed: () {
                               _launchURL("https://github.com/thisishardik");
                             },
                             icon: SvgPicture.asset("assets/icons/github.svg"),
                           ),
+                          // LeetCode
                           IconButton(
                             onPressed: () {
                               _launchURL("https://leetcode.com/user9422Zm/");
                             },
                             icon: SvgPicture.asset("assets/icons/leetcode.svg"),
                           ),
+                          // HackerRank
                           IconButton(
                             onPressed: () {
                               _launchURL("https://www.hackerrank.com/Aarsh105");
