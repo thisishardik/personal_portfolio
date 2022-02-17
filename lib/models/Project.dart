@@ -1,38 +1,45 @@
 class Project {
-  final String? title, description;
+  final String? title, description, url;
 
-  Project({this.title, this.description});
+  Project({this.title, this.description, this.url});
 }
 
 List<Project> demo_projects = [
   Project(
-    title: "Responsive Admin Panel or Dashboard - Flutter UI",
+    title:
+        "Accelerating Innovation for Rainforest Biodiversity Assessment in a Complex Ecosystem using AI",
     description:
-        "On Flutter V2.* web officially supported on a stable branch. Today I share an Admin panel or you can call it dashboard UI build with flutter. Now you can build your app dashboard using flutter. This dashboard contains almost everything that you need like a chart, table, nice small card for showing info.",
+        "Developed novel technologies for Floral and Fauna Species Identification to be categorized into some level of Taxonomic groups. We utilized AWS SageMaker Studio for data mining and data labeling to build highly accurate species training and test datasets. Orchestrated ETL processes using in-house Python clients on open-access data warehouses for further analysis. Finally deployed interactive dashboards for the client to visualize the surveyed information for a comprehensive study.",
+    url: "",
   ),
   Project(
-    title: "E-Commerce Complate App - Flutter UI",
+    title: "Forum Posts Clustering and Document Embedding",
     description:
-        "In the first part of our complete e-commerce app, we show you how you can create a nice clean onboarding screen for your e-commerce app that can run both Andriod and iOS devices because it builds with flutter. Then on the second episode, we build a Sign in, Forgot Password screen with a custom error indicator.",
+        "Incorporated Hierarchical document clustering to cluster forum posts from Meta Kaggle. I utilized a lightweight and unsupervised keyword extraction algorithm, YAKE, to extract important keywords from each document followed by feature engineering. Fine-tuned Word2Vec document vectors using GoogleNews embeddings which greatly increased the validation accuracy by 15.7%. ",
+    url: "",
   ),
   Project(
-    title: "Outlook Email App Redesign - Flutter Fully Responsive Design UI",
+    title: "AI Advertisement Web Platform",
     description:
-        "We redesign the outlook app also make it responsive so that you can run it everywhere on your phone, tab, or web. In this flutter responsive video, we will show you the real power of flutter. Make mobile, web, and desktop app from a single codebase.",
+        "An AI-powered advertisement platform that performs Face Detection to detect your age and gender via a camera and show you video advertisements related to the products that suit your corresponding age and gender in real-time. Utilizes Haar Cascade Frontal Face for detecting user's face in real-time and Wide Residual Networks for age and gender prediction. Developed using HTML, CSS Python, TensorFlow, Keras, OpenCV and Flask.",
+    url: "",
   ),
   Project(
-    title: "Chat/Messaging App Light and Dark Theme - Flutter UI",
+    title: "Fraud Detection in Retail Transactions using Deep Learning",
     description:
-        "Today we gonna build messing/chat app #ui using #flutter that runs both Android and iOS devices also has a dark and light theme. We create in total 4 screens all of that support both Dark Theme and Light Theme. At first, we design a welcome screen that contains an image with a tag line also has a skip button.",
+        "Reviewed customers’ credit card transactions to evaluate potential fraud. Detected and visualized fraudulent patterns using cluster analysis to better analyze data. I utilized Synthetic Minority Oversampling Technique (SMOTE) to overcome the class imbalance (CI) problem. Combined the XGBoost classifier with SMOTE to create a Resampling Pipeline that predicts fraudulent transactions based on labels provided in the training dataset.",
+    url: "",
   ),
   Project(
-    title: "Welcome page, Login Page and Sign up page - Flutter UI",
+    title: "Automated Driver Drowsiness Control Android Application",
     description:
-        "In the first part of our complete e-commerce app, we show you how you can create a nice clean onboarding screen for your e-commerce app that can run both Andriod and iOS devices because it builds with flutter. Then on the second episode, we build a Sign in, Forgot Password screen with a custom error indicator.",
+        "Developed the methodology to detect and predict driver drowsiness at early stages using physical and physiological variables. A feasibility test is conducted to evaluate the accuracy and performance of the proposed methodology. AI techniques like Google Vision are utilized to analyze data for monitoring, detecting, predicting, and controlling driver drowsiness. An Android application developed in Java is prepared end-to-end for the user and applied for data collection in future research experiments.",
+    url: "",
   ),
   Project(
-    title: "Covid-19 App - Flutter UI",
+    title: "Curae - People and Healthcare",
     description:
-        "We redesign the outlook app also make it responsive so that you can run it everywhere on your phone, tab, or web. In this flutter responsive video, we will show you the real power of flutter. Make mobile, web, and desktop app from a single codebase.",
+        "Curae is an AI-powered telemedicine app that reduces the hassle of offline appointments by transforming the entire appointment lifecycle online. All documents are assigned with unique ids on the server and are accessible using a unique QR code. It also supports a pre-assessment smart self-checkup chatbot that generates automated reports for quick diagnosis. Developed using Flutter, Provider, Node.js, Express API, AWS Lambda, AWS API Gateway, AWS Cognito, and AWS DynamoDB.",
+    url: "",
   ),
 ];

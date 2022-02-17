@@ -15,17 +15,22 @@ class Knowledges extends StatelessWidget {
       children: [
         Divider(),
         Padding(
-          padding: const EdgeInsets.symmetric(
-              vertical: defaultPadding),
+          padding: const EdgeInsets.symmetric(vertical: defaultPadding),
           child: Text(
-            "Knowledges",
+            "Tools/Technologies",
             style: Theme.of(context).textTheme.subtitle2,
           ),
         ),
-        KnowledgeText(text: "Flutter, Dart"),
-        KnowledgeText(text: "Stylus, Sass, Less"),
-        KnowledgeText(text: "Gulp, Webpack, Grunt"),
-        KnowledgeText(text: "GIT Knowledge"),
+        KnowledgeText(
+            text:
+                "TensorFlow, Keras, Sklearn, Matplotlib, Seaborn, NLTK, Gensim, OpenCV"),
+        KnowledgeText(
+            text:
+                "Android, React Native, React.js, Redux, Bootstrap, jQuery, REST"),
+        KnowledgeText(
+          text: "Amazon Web Services, Django, Flask, Node.js, Firebase, Parse, Heroku",
+        ),
+        KnowledgeText(text: "MySQL, SQLite, PostgreSQL, MongoDB"),
       ],
     );
   }
@@ -47,7 +52,11 @@ class KnowledgeText extends StatelessWidget {
         children: [
           SvgPicture.asset("assets/icons/check.svg"),
           SizedBox(width: defaultPadding / 2),
-          Text(text),
+          Expanded(
+            child: Text(
+              text,
+            ),
+          ),
         ],
       ),
     );

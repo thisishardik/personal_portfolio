@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/constants.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'area_info_text.dart';
 import 'coding.dart';
@@ -26,16 +27,20 @@ class SideMenu extends StatelessWidget {
                 child: Column(
                   children: [
                     AreaInfoText(
-                      title: "Residence",
-                      text: "Bangladesg",
+                      title: "Education",
+                      text: "SRM University",
                     ),
                     AreaInfoText(
-                      title: "City",
-                      text: "Dhaka",
+                      title: "Degree",
+                      text: "B.Tech",
                     ),
                     AreaInfoText(
-                      title: "Age",
-                      text: "22",
+                      title: "Course",
+                      text: "Computer Science Engineering with specialization in Big Data Analytics",
+                    ),
+                    AreaInfoText(
+                      title: "CGPA",
+                      text: "9.56",
                     ),
                     Skills(),
                     SizedBox(height: defaultPadding),
@@ -43,26 +48,26 @@ class SideMenu extends StatelessWidget {
                     Knowledges(),
                     Divider(),
                     SizedBox(height: defaultPadding / 2),
-                    TextButton(
-                      onPressed: () {},
-                      child: FittedBox(
-                        child: Row(
-                          children: [
-                            Text(
-                              "DOWNLOAD CV",
-                              style: TextStyle(
-                                color: Theme.of(context)
-                                    .textTheme
-                                    .bodyText1!
-                                    .color,
-                              ),
-                            ),
-                            SizedBox(width: defaultPadding / 2),
-                            SvgPicture.asset("assets/icons/download.svg")
-                          ],
-                        ),
-                      ),
-                    ),
+                    // TextButton(
+                    //   onPressed: () {},
+                    //   child: FittedBox(
+                    //     child: Row(
+                    //       children: [
+                    //         Text(
+                    //           "DOWNLOAD CV",
+                    //           style: TextStyle(
+                    //             color: Theme.of(context)
+                    //                 .textTheme
+                    //                 .bodyText1!
+                    //                 .color,
+                    //           ),
+                    //         ),
+                    //         SizedBox(width: defaultPadding / 2),
+                    //         SvgPicture.asset("assets/icons/download.svg")
+                    //       ],
+                    //     ),
+                    //   ),
+                    // ),
                     Container(
                       margin: EdgeInsets.only(top: defaultPadding),
                       color: Color(0xFF24242E),
@@ -70,16 +75,28 @@ class SideMenu extends StatelessWidget {
                         children: [
                           Spacer(),
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              _launchURL("https://www.linkedin.com/in/hardik-srivastava-2911hs/");
+                            },
                             icon: SvgPicture.asset("assets/icons/linkedin.svg"),
                           ),
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              _launchURL("https://github.com/thisishardik");
+                            },
                             icon: SvgPicture.asset("assets/icons/github.svg"),
                           ),
                           IconButton(
-                            onPressed: () {},
-                            icon: SvgPicture.asset("assets/icons/twitter.svg"),
+                            onPressed: () {
+                              _launchURL("https://leetcode.com/user9422Zm/");
+                            },
+                            icon: SvgPicture.asset("assets/icons/leetcode.svg"),
+                          ),
+                          IconButton(
+                            onPressed: () {
+                              _launchURL("https://www.hackerrank.com/Aarsh105");
+                            },
+                            icon: SvgPicture.asset("assets/icons/hackerrank.svg"),
                           ),
                           Spacer(),
                         ],
@@ -94,4 +111,9 @@ class SideMenu extends StatelessWidget {
       ),
     );
   }
+
+  void _launchURL(String _url) async {
+    if (!await launch(_url)) throw 'Could not launch $_url';
+  }
+
 }

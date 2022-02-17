@@ -22,29 +22,82 @@ class Skills extends StatelessWidget {
           ),
         ),
         Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Expanded(
               child: AnimatedCircularProgressIndicator(
-                percentage: 0.8,
-                label: "Flutter",
+                percentage: 0.85,
+                label: "Machine Learning",
               ),
             ),
             SizedBox(width: defaultPadding),
             Expanded(
               child: AnimatedCircularProgressIndicator(
-                percentage: 0.72,
-                label: "Django",
+                percentage: 0.7,
+                label: "NLP",
               ),
             ),
             SizedBox(width: defaultPadding),
             Expanded(
               child: AnimatedCircularProgressIndicator(
-                percentage: 0.65,
-                label: "Firebase",
+                percentage: 0.7,
+                label: "Image Processing",
               ),
             ),
           ],
         ),
+        SizedBox(height: 18.0),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Expanded(
+              child: AnimatedCircularProgressIndicator(
+                percentage: 0.75,
+                label: "Data Wrangling",
+              ),
+            ),
+            SizedBox(width: defaultPadding),
+            Expanded(
+              child: AnimatedCircularProgressIndicator(
+                percentage: 0.75,
+                label: "Data Visualization",
+              ),
+            ),
+            SizedBox(width: defaultPadding),
+            Expanded(
+              child: AnimatedCircularProgressIndicator(
+                percentage: 0.8,
+                label: "Full Stack \nDeveloper",
+              ),
+            ),
+          ],
+        ),
+        // SizedBox(height: 18.0),
+        // Row(
+        //   crossAxisAlignment: CrossAxisAlignment.start,
+        //   children: [
+        //     Expanded(
+        //       child: AnimatedCircularProgressIndicator(
+        //         percentage: 0.8,
+        //         label: "React",
+        //       ),
+        //     ),
+        //     SizedBox(width: defaultPadding),
+        //     Expanded(
+        //       child: AnimatedCircularProgressIndicator(
+        //         percentage: 0.75,
+        //         label: "Django",
+        //       ),
+        //     ),
+        //     SizedBox(width: defaultPadding),
+        //     Expanded(
+        //       child: AnimatedCircularProgressIndicator(
+        //         percentage: 0.75,
+        //         label: "Node.js",
+        //       ),
+        //     ),
+        //   ],
+        // ),
       ],
     );
   }

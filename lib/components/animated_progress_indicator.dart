@@ -32,7 +32,7 @@ class AnimatedCircularProgressIndicator extends StatelessWidget {
                 Center(
                   child: Text(
                     (value * 100).toInt().toString() + "%",
-                    style: Theme.of(context).textTheme.subtitle1,
+                    style: Theme.of(context).textTheme.subtitle1?.copyWith(fontSize: 14.5),
                   ),
                 ),
               ],
@@ -42,9 +42,10 @@ class AnimatedCircularProgressIndicator extends StatelessWidget {
         SizedBox(height: defaultPadding / 2),
         Text(
           label,
-          maxLines: 1,
+          maxLines: 2,
           overflow: TextOverflow.ellipsis,
-          style: Theme.of(context).textTheme.subtitle2,
+          style: Theme.of(context).textTheme.subtitle2?.copyWith(fontSize: 12.0),
+          textAlign: TextAlign.center,
         ),
       ],
     );
